@@ -36,7 +36,7 @@ if __name__ == '__main__':
     print(A+B)    # 输出结果：[ [4 2] [3 10] ]
 
     '''
-    NumPy数组访问元素
+    NumPy 数组访问元素
     '''
     X = np.array([[51, 55], [14, 19], [0, 4]])
     print(X[0])        # 输出第 0 行元素：[51, 55]
@@ -51,4 +51,18 @@ if __name__ == '__main__':
     print(X > 15)        # 比较数组中各个元素是否大于15，得到一个布尔型数组。输出结果：[True True False True False False]
     print(X[X > 15])     # 输出数组中，大于15 的元素。输出结果：[51 55 19]
 
+    '''
+    NumPy 的 矩阵乘法
+    '''
+if __name__ == '__main__':
+    A = np.array([1, 2, 3, 4])
+    print(np.ndim(A))    # np.ndim(A)：输出 A 的维度
+    print(A.shape)       # A.shape：指明 A 是几行几列，以元组的形式输出。在此的输出结果为 (4,)
+    B = np.array([[1, 2], [3, 4], [5, 6]])
+    print(np.ndim(B))    # 输出结果：2
+    print(B.shape)       # 输出结果：(3, 2)
+
+    C = np.array([[1, 2], [3, 4]])
+
+    print(np.dot(B, C))    # 利用 np.dot(B, C) 实现矩阵的乘法
 
