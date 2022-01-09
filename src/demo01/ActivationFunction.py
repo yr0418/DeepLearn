@@ -6,6 +6,7 @@
 @time : 2022-01-06 19:33
 """
 
+
 import numpy as np
 import matplotlib.pylab as plt
 
@@ -22,6 +23,7 @@ def step_function(x):
 
     # 简易写法：return np.array(x>0, dtype=np.int)
 
+
 def sigmoid_function(x):
     """
     sigmoid 函数的实现
@@ -31,6 +33,7 @@ def sigmoid_function(x):
     """
     return 1/(1+np.exp(-x))    # np.exp(-x) 即为 e^(-x)
 
+
 def ReLU_function(x):
     """
     ReLU 函数的实现
@@ -39,6 +42,13 @@ def ReLU_function(x):
     :return:  根据函数式计算得到的结果组成的 NumPy数组
     """
     return np.maximum(0, x)    # np.maximum：从输入的数值中，选择最大值进行输出
+
+
+def identity_function(y):
+    """
+    输出层的激活函数，即本身
+    """
+    return y
 
 
 if __name__ == '__main__':
