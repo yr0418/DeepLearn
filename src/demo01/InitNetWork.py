@@ -8,7 +8,8 @@
 
 
 import numpy as np
-import ActivationFunction as active
+import ActivationFunction as Activate
+import OutputFunction as Output
 
 
 def init_network():
@@ -38,18 +39,18 @@ def forward(network, x):
 
     """ 计算第一层的输出信号 """
     a1 = np.dot(x, W1) + b1
-    z1 = active.sigmoid_function(a1)
+    z1 = Activate.sigmoid_function(a1)
 
     """ 计算第二层的输出信号 """
     a2 = np.dot(z1, W2) + b2
-    z2 = active.sigmoid_function(a2)
+    z2 = Activate.sigmoid_function(a2)
 
     """ 计算第三层的输出信号 """
     a3 = np.dot(z2, W3) + b3
 
-    y = active.identity_function(a3)    # 最终输出
+    y = Activate.identity_function(a3)    # 最终输出
 
-    return y
+    return Output.identity_function(y)
 
 
 if __name__ == '__main__':

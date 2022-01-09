@@ -44,13 +44,6 @@ def ReLU_function(x):
     return np.maximum(0, x)    # np.maximum：从输入的数值中，选择最大值进行输出
 
 
-def identity_function(y):
-    """
-    输出层的激活函数，即本身
-    """
-    return y
-
-
 if __name__ == '__main__':
     x = np.arange(-5.0, 5.0, 0.1,)
     y1 = step_function(x)
